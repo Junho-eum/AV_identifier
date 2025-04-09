@@ -10,6 +10,7 @@ It detects:
 ---
 
 ## Project Structure
+```
 AV_identifier/
 ├── main.py                     # Entry point to run the crawler
 ├── data/
@@ -23,7 +24,7 @@ AV_identifier/
 │   └── scraper.py              # Main scraping logic
 ├── screenshots/                # Saved screenshots for visual inspection
 └── html_dumps/                 # HTML dumps for fallback debugging
-
+```
 ---
 
 ## Features
