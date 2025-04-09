@@ -1,0 +1,138 @@
+<html><head>
+<title>Eporner Age Verification</title>
+<link rel="stylesheet" href="https://www.eporner.com/static/style-20241127-ca.css">
+<style>
+.epwhite body {background:url(https://static.eporner.com/ageVerif/blurred-background.jpg);}
+body {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12.5px;
+margin: 0px;
+padding: 75px 0px 0px;
+background-color:#000;
+background-image:url(https://static.eporner.com/ageVerif/blurred-background.jpg);
+background-repeat: no-repeat;
+}
+#ageverifyusa a {color:#fff; font-size:12px;}
+/* ADD MOBILE VERSION WIDTH!!!!!!!!!! */
+#ageverifyusa {
+width: 40%;
+min-height: 400px;
+max-width: 740px;
+z-index: 1000002;
+position: absolute;
+left: 30%;
+top: 20%;
+box-sizing: border-box;
+box-shadow: rgb(174, 0, 0) 0px 0px 10px;
+color: rgb(204, 204, 204);
+font-size: 1.3em;
+text-align: justify;
+background: rgb(0, 0, 0);
+}
+#ageverifyusa #ageverifyusa-inner {padding: 10px 40px 40px 40px;}
+#ageverifyusa span {
+display: block;
+color: rgb(174, 0, 0);
+margin-bottom: 20px;
+font-size: 1.5em;
+text-align: left;
+}
+#ageverifyusa button {
+width: 100%;
+cursor: pointer;
+font-size: 1.2em;
+color: rgb(255, 255, 255);
+text-transform: uppercase;
+line-height: 2em;
+background-image: linear-gradient(rgb(68, 68, 68), rgb(17, 17, 17));
+margin-bottom: 40px;
+border-radius: 5px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(51, 51, 51);
+border-image: initial;
+text-decoration: none;
+padding: 4px 15px 3px;
+}
+#ageverifyusa #headerag {display:block; height:50px; line-height:50px; width:100%; background:#ae0000; position:relative;}
+#ageverifyusa #headerag #logox img {height:40px; margin-top:5px; margin-left:10px;}
+#ageverifyusa #headerag #usflag {display:inline-block; width:50%;line-height:50px;}
+#ageverifyusa #headerag #usflag img {height:14px; margin-top:5px; margin-right:10px; position:absolute; top:12px; right:5px;}
+#ageverifyusa button {margin:10px 0px;}
+#ageverifyusa .rta {width:50px;}
+.footnavusa {list-style:none; padding:20px 0px;}
+.footnavusa li {list-style:none; display:inline-block; margin-right:10px;}
+#ageverifyusa .footnavusa li a {color:#999;}
+@media screen and (max-width:870px){
+body {background-image:none;}
+#ageverifyusa {width:90%; left:5%; top:5%;}
+#ageverifyusa-inner {padding:10px;}
+}
+</style>
+<script>
+var EP = EP || {};
+EP.page = EP.page || {};
+EP.ageVerif = EP.ageVerif || {};
+EP.menu = EP.menu || {};
+EP.beacon = EP.beacon || {};
+EP.menu.items = [];
+EP.user = EP.user || {};
+EP.user.logged=false;
+EP.user.login=false;
+EP.user.verified=false;
+EP.user.id=false;
+EP.user.hash=false;
+EP.ageVerif.shouldFireModal = false;
+if(document.cookie.indexOf('epcolor=')===-1) {
+EP.page.color='black';
+} else if(document.cookie.indexOf('epcolor=white')!==-1) { EP.page.color='white'; document.documentElement.className += ' epwhite'; }
+else { EP.page.color='black'; }
+EP.beacon.pageType = 'listing';
+var geocc='ca';
+var geoct='US';
+var georeg='VA';
+var EP_tb_loaded=0;
+var EP_translations=[]; EP_translations['Watch later'] = 'Watch later'; EP_translations['Added'] = 'Added';
+</script>
+<script src="https://static-ca-cdn.eporner.com/js/new/jquery-3.4.1.min.js"></script>
+<script src="https://static-ca-cdn.eporner.com/ajax3.js?cache=20241128"></script>
+</head>
+<body>
+<div id="ageverifyusa">
+<div id="headerag">
+<div id="logox"><img src="https://static-eu-cdn.eporner.com/new/logo.svg"></div>
+<div id="usflag"><img src="https://static-eu-cdn.eporner.com/flags/png/US.PNG"></div>
+</div>
+<div id="ageverifyusa-inner">
+<p>This website is intended for an adult audience and complies with current U.S. regulations in your state.
+It contains text, photos, and videos classified as adult-only, which may be sensitive or offensive to some viewers.</p>
+<span>You must be 18+ to access <strong>Eporner</strong></span>
+<br>
+<center>
+<button onclick="return EP.account.login.openModalAgeVer('login');">Login</button>
+or
+<button onclick="return EP.account.login.openModalAgeVer('create');">Register</button>
+to prove your age
+</center>
+<p><img class="rta" src="https://static-eu-cdn.eporner.com/new/rta.gif" data-src="https://static-eu-cdn.eporner.com/new/rta.gif" alt="RTA parental control"> <a href="https://www.eporner.com/parentalcontrol/">Learn more about parental controls</a></p>
+<ul class="footnavusa">
+<li><a href="/contact/" title="Contact Eporner">Contact</a></li>
+<li><a href="/advertisement/" title="Advertisement on Eporner">Advertisement</a></li>
+<li><a href="/faq/" title="FAQ">FAQ</a></li>
+<li><a href="/parentalcontrol/" title="Parental control">Parental control</a></li>
+<li><a href="/terms/" title="Eporner Terms of use">Terms of use</a></li>
+<li><a href="/privacy-2257/" title="Eporner 2257 Statement &amp; Privacy Policy">2257 Statement &amp; Privacy Policy</a></li>
+<li><a href="/dmca/" title="DMCA contact">DMCA</a></li>
+</ul>
+</div>
+</div>
+<style>
+#simplemodal-overlay {opacity:0.8 !important;}
+</style>
+<script>
+if(EP.user.logged === true && EP.user.verified === false) {
+check_email_ver('agever');
+}
+</script>
+
+ </body></html>
